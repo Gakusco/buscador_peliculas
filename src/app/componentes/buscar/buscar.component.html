@@ -1,0 +1,16 @@
+<div class="card">
+    <div class="card-body">
+
+        <form class="form-inline">
+            <div>
+                <label class="form-control-plaintext" for="titulo">Título:</label>
+                <input type="name" class="form-control ml-1" id="titulo" placeholder="Harry Potter" (keyup.enter)="buscarPeliculas(obtenerTitulo.value, obtenerYear.value)" #obtenerTitulo>
+            </div>
+            <div>
+                <label class="form-control-plaintext" for="year">Año:</label>
+                <input type="number" class="form-control ml-1" id="year" placeholder="2011" (keyup.enter)="buscarPeliculas(obtenerTitulo.value, obtenerYear.value)" #obtenerYear>
+                <button type="button" (click)="buscarPeliculas(obtenerTitulo.value, obtenerYear.value)" class="btn btn-primary ml-1 fa fa-search"> Buscar</button>
+            </div>
+        </form>
+    </div>
+</div>

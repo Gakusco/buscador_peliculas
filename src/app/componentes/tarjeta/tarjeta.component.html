@@ -1,0 +1,14 @@
+<div class="card mb-3 animate__animated animate__backInLeft animate__faster" width="240px">
+    <img [title]="pelicula.titulo" [src]="pelicula.poster | default: '../../assets/images/sin-imagen.png'" class="card-img-top" [alt]="pelicula.titulo">
+
+    <div class="card-body">
+        <h5 class="card-title">{{pelicula.titulo}} <small>({{pelicula.year}})</small></h5>
+        <p class="card-text">Género: {{pelicula.genero}}</p>
+        <p class="card-text">Pais: {{pelicula.pais}}</p>
+        <p class="card-text">
+            <app-estrella *ngIf="pelicula.rating; else elseBlock" [rating]="pelicula.rating"></app-estrella>
+            <ng-template #elseBlock>Sin calificación</ng-template>
+        </p>
+    </div>
+
+</div>
